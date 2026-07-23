@@ -1,0 +1,15 @@
+// Add interactivity to the score visualization
+        function initScoreVisualization() {
+            const scoreComponents = document.querySelectorAll('.score-component');
+            scoreComponents.forEach(component => {
+                component.addEventListener('mouseenter', () => {
+                    component.style.transform = 'translateY(-5px)';
+                    component.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+                });
+
+                component.addEventListener('mouseleave', () => {
+                    component.style.transform = 'translateY(0)';
+                    component.style.boxShadow = 'none';
+                });
+            });
+        }

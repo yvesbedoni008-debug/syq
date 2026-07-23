@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "syq"
+version = "1.0.0"
+description = "SYQ - Opportunity Intelligence Platform"
+authors = ["SYQ Team"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.104.0"
+uvicorn = {extras = ["standard"], version = "^0.27.0"}
+sqlalchemy = {version = "^2.0.0", extras = ["asyncio"]}
+asyncpg = "^0.29.0"
+alembic = "^1.13.0"
+pydantic = {version = "^2.5.0", extras = ["email"]}
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+passlib = {version = "^1.7.4", extras = ["bcrypt"]}
+python-multipart = "^0.0.6"
+redis = "^5.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-asyncio = "^0.23.0"
+httpx = {version = "^0.27.0", extras = ["http2"]}
+ruff = "^0.4.0"
+black = "^24.1.0"
+mypy = "^1.8.0"
+
+[tool.pytest.ini_options]
+testpaths = "tests"
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+addopts = [
+    "-v",
+    "--strict-markers",
+    "--tb=short",
+]
+markers = [
+    "unit: Unit tests",
+    "integration: Integration tests",
+    "api: API tests",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

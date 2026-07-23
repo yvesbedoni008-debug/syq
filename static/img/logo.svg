@@ -1,0 +1,11 @@
+<!-- SYQ Logo - Simple SVG placeholder -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#B6FF3B;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#A0EA20;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <circle cx="32" cy="32" r="30" fill="url(#grad1)" />
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#080808" font-family="IBM Plex Sans, sans-serif" font-size="24" font-weight="600">SY</text>
+</svg>
