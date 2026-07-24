@@ -47,7 +47,7 @@ if SettingsConfigDict is not None:
         PORT: int = 8000
         DEBUG: bool = False
 
-        SECRET_KEY: str = Field(default_factory=lambda: secrets.token_urlsafe(32))
+        SECRET_KEY: str = Field(default=secrets.token_urlsafe(32))
         ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 8
         ALGORITHM: str = "HS256"
 
@@ -133,7 +133,7 @@ else:
         PROJECT_NAME: str = "SYQ - Opportunity Intelligence Platform"
         VERSION: str = "0.1.0"
         API_V1_STR: str = "/api/v1"
-        SECRET_KEY: str = Field(default_factory=lambda: secrets.token_urlsafe(32))
+        SECRET_KEY: str = Field(default=secrets.token_urlsafe(32))
         DATABASE_URL: str = "sqlite+aiosqlite:///./syq.db"
         BACKEND_CORS_ORIGINS: List[str] = ["http://localhost:3000"]
         ALLOWED_HOSTS: List[str] = ["*"]
